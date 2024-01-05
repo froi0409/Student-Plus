@@ -37,6 +37,14 @@ public class UserServiceImpl implements UserService {
             userDB.setPassword(user.getPassword());
         }
 
+        if (Objects.nonNull(user.getFirstName()) && !user.getFirstName().equals("")) {
+            userDB.setFirstName(user.getFirstName());
+        }
+
+        if (Objects.nonNull(user.getLastName()) && !user.getLastName().equals("")) {
+            userDB.setLastName(user.getLastName());
+        }
+
         if (Objects.nonNull(user.getRole())) {
             userDB.setRole(user.getRole());
         }
